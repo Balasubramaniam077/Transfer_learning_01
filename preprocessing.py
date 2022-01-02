@@ -5,7 +5,7 @@ import torch
 batch_size = 32
 
 def trainDataset():
-    dataset = dset.ImageFolder(root="dataset/train",
+    dataset = dset.ImageFolder(root="../input/100-bird-species/train",
                             transform=transforms.Compose([
                                 transforms.RandomRotation(30),
                                 transforms.RandomHorizontalFlip(),
@@ -20,7 +20,7 @@ def trainDataset():
     return dataloader                               
 
 def testDataset():
-    dataset = dset.ImageFolder(root="dataset/test",
+    dataset = dset.ImageFolder(root="../input/100-bird-species/test",
                             transform=transforms.Compose([
                                 transforms.Resize([224, 224]),
                                 transforms.ToTensor(),
