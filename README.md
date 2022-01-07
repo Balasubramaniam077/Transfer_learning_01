@@ -5,7 +5,7 @@
 
   <h1>Torchvision :</h1>
 <body>
-  <p>?Just again an information about what is Torchvision & why we use ?</p>
+  <p>Just again an information about what is Torchvision & why we use ?</p>
 
 <p>Torchvision Lib:
   https://pytorch.org/vision/stable/models.html</p>
