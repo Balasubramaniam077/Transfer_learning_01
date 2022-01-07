@@ -10,7 +10,11 @@
 <p>Torchvision Lib:
   https://pytorch.org/vision/stable/models.html</p>
 
+  
+![1_LUFUl_8fqS97nUzpcFjgWw](https://user-images.githubusercontent.com/67773609/148564453-76942262-418d-4473-ab69-e498615f57d5.png)
 
+  
+  <p> In change the layers with using the diifer model in torch vision lib </p>
 <p>My Code Tutorial in <a href="https://www.kaggle.com/balasubramaniamv/transfer-learning-tutorial">Kaggle</a>
   
   
