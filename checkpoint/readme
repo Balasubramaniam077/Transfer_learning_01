@@ -1,1 +1,53 @@
 
+#This code for after the classification it will run for write the classificatiion name in tested class folder 
+
+
+#Requirement:
+
+import torchvision.datasets as dset
+import torchvision.transforms as transforms
+import torch
+import numpy
+from torchvision import models
+import cv2
+import os
+from tqdm import tqdm
+
+
+#Dataset Loader
+
+
+
+dataset = dset.ImageFolder(root="test_folder_path",
+                        transform=transforms.Compose([
+                            transforms.Resize([224, 224]),
+                            transforms.ToTensor(),
+                            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+                        ]))
+dataloader = torch.utils.data.DataLoader(dataset,
+                                        batch_size=1,
+                                        shuffle=False,
+                                        num_workers=0)
+                                        
+                                        
+                                        
+#imwrite function
+
+
+model = models.resnet50()
+model.load_state_dict(torch.load('/content/checpoint_epoch89.pt', map_location=torch.device("cuda")))
+model.eval()
+
+for index, paths in tqdm(enumerate(os.listdir("/content/dataset/test/shark/"))):
+  output = model(list(dataloader)[index][0])
+  _, predicted = torch.max(output, 1)
+  
+  if predicted[0].numpy() == 0:
+  
+   im = cv2.imread("/content/dataset/test/shark/" + paths)
+    # print("/content/dataset/test//" + paths)
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    cv2.putText(im, 'Shark', (10,450), font, 3, (0, 255, 0), 2, cv2.LINE_AA)
+    cv2.imwrite("/content/dataset/test/shark/" + paths, im)
+                                        
+                                        
