@@ -15,7 +15,7 @@
 
   
   <p> In change the layers with using the diifer model in torch vision lib </p>
-<p>My Code Tutorial in <a href="https://www.kaggle.com/balasubramaniamv/transfer-learning-tutorial">Kaggle</a>
+<p>My My NoteBook in <a href="https://www.kaggle.com/balasubramaniamv/transfer-learning-tutorial">Kaggle</a>
   
   
 
