@@ -14,7 +14,7 @@ device = torch.device("cuda")
 train_loader = trainDataset()
 test_loader = testDataset()
 
-model = models.resnet50().cuda()
+model = models.mobilenet_v2(num_classes=6).cuda()
 ########################
 # model.load_state_dict(torch.load('checkpoint/checpoint_epoch.pt'))
 # model.eval()
