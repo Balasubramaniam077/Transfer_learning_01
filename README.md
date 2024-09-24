@@ -15,6 +15,9 @@
   
  
 <p>My NoteBook in <a href="https://www.kaggle.com/balasubramaniamv/transfer-learning-tutorial">Kaggle</a>
+
+
+<p> Refer the Blog for core understanting <a href="https://www.kdnuggets.com/2023/06/practical-guide-transfer-learning-pytorch.html">Blog Post</a></p>
   
   
 
